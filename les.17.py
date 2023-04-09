@@ -32,7 +32,19 @@ while True:
         elif y < 200:
             y += 1
 
+
+    if y < 100 or y > 400 or x < 100 or x > 400:
+        color = (255, 0, 0)
+        v  = 1
+        rad = 50
+    else:
+        color = (0, 255, 0)
+        v = 5
+        rad = 50
+
     win.fill((220, 255, 100))
+
+    pygame.draw.circle(win, color, (x + 50, y + 50), 50)
     win.blit(main_character, (x, y))
 
     pygame.display.update()
